@@ -1,0 +1,183 @@
+<html>
+<p>This Is Custom HTML</p>
+  
+  
+  <br/><label for='customfieldid'>Custom Field Label</label><br>
+
+ 
+
+<head>
+
+<style type="text/css">
+
+    fieldset {
+
+        width: 500px;
+
+        background-color: lightblue;
+
+    }
+
+ 
+
+    fieldset legend {
+
+        font-weight: bold;
+
+    }
+
+ 
+
+    fieldset p {
+
+        clear:both;
+
+        padding: 5px;
+
+    }
+
+ 
+
+    fieldset label {
+
+        text-align: left;
+
+        width: 100px;
+
+        float: left;
+
+        font-weight: bold;
+
+    }
+
+ 
+
+    fieldset .Validator {
+
+        color: red !important;
+
+        font-weight: bold;
+
+    }
+
+ 
+
+</style>
+
+<head>
+
+<body>
+
+    <form>
+
+        <fieldset>
+
+            <legend>Data</legend>
+
+            <p>
+
+                <label for="firstName">First Name:</label>
+
+                <input name="firstName" id="firstName" class="required" type="text" />
+
+                <span class="Validator" style="display: none;">*</span>
+
+            </p>
+
+            <p>
+
+                <label for="lastName">Last Name:</label>
+
+                <input name="lastName" id="lastName" class="required" type="text" />
+
+                <span class="Validator">*</span>
+
+                                                                <div class="row">
+
+  <div class="column">                                                   <input type='radio' name='customfieldid' value='1' checked> Monday<br>
+
+                                                                <input type='radio' name='customfieldid' value='2'> Tuesday<br>
+
+                                                                <input type='radio' name='customfieldid' value='3'> Threee<br>
+
+                                                                </div>
+
+ 
+
+  <div class="column">                                                   <input type='radio' name='customfieldid' value='1' checked> Monday<br>
+
+                                                                <input type='radio' name='customfieldid' value='2'> Tuesday<br>
+
+                                                                <input type='radio' name='customfieldid' value='3'> Three<br>
+
+                                                                </div>
+
+</div>
+
+ 
+
+            </p>
+
+        </fieldset>
+
+    </form>
+
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+  height: 430px; /* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+<h2>Automatic Door Settings</h2>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+                <input name="Time" id="PreTime" class="required" type="text" />
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Control Settings</h2>
+                below enter the time for open and close of the door. For Sunrise/Sunset enter the number of minutes after civil twilight for the door to open or close. Negative minutes should be used for times before civil twilight<br> Note: civil twilight is used for better alignment with the observed darkness.This is especally critical for higher lattitude locations<br>
+                for scheduled times enter the time for open/close in 24 hour format hh:mm [for example 21:54]<br>
+                Open:  <input name="Open Time" label="Open" id="OpenTime" class="required" type="text" /><br>
+                Close: <input name="Close Time" label="Close" id="CloseTime" class="required" type="text" /><br>
+                <br>Control Method<br>
+                <input type='radio' name='customfieldid' value='1' checked> Sunrise/Sunset (best method)<br>
+                <input type='radio' name='customfieldid' value='2'> Scheduled Times<br>
+                <input type='radio' name='customfieldid' value='3'> Brightness<br>
+				<input type='radio' name='customfieldid' value='4'> Manual Only<br>
+                <input type="checkbox" id="LowTemp" name="LowTemp" value='LowTemp'><label for="LowTemp">Low Temperture Lockout</label><br>
+                <input name="TempL" id="TempL" class="required" type="text" value="10" />F
+  </div>
+    <div class="column" style="background-color:#cccc;">
+    <h2>Door Scheduling</h2>
+                <input type="checkbox" id="Monday" name="Monday" value='Monday1'  checked><label for="Monday"> Monday   </label><br>
+                <input type="checkbox" id="Tuesday" name="Tuesday" value='Tuesday1'  checked><label for="Tuesday"> Tuesday  </label><br>
+                <input type="checkbox" id="Wednesday" name="Wednesday" value='Wednesday'  checked><label for="Wednesday"> Wednesday</label><br>
+                <input type="checkbox" id="Thursday" name="Thursday" value='Thursday1'  checked><label for="Thursday"> Thursday </label><br>
+                <input type="checkbox" id="Friday" name="Friday" value='Friday1'  checked><label for="Friday"> Friday   </label><br>
+                <input type="checkbox" id="Saturday" name="Saturday" value='Saturday1'  checked><label for="Saturday"> Saturday </label><br>
+                <input type="checkbox" id="Sunday" name="Sunday" value='Sunday1'  checked><label for="Sunday"> Sunday   </label><br>    
+  </div>
+</div>
+</body>
+</html>
+  
+ 
