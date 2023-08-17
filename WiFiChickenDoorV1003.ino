@@ -1,4 +1,4 @@
-
+analogSetAttenuation(ADC_2_5db);// Setting for 1.1V range
 
 #include <ADS1X15.h>
 
@@ -322,38 +322,39 @@ void loop() {
 //  esp_task_wdt_reset(); // Resets if board locks up
 
   currentMillis = millis();
-
+analogSetAttenuation(ADC_2_5db);// Setting for 1.1V range
 // Get status of the door
 int sensorValue = analogRead(A0);
-if (sensorValue<157){
+  analogSetAttenuation(ADC_11db);// Default 2.6V
+if (sensorValue<628){
   is_top = 0;
   is_bot = 0;
 }
-else if (sensorValue<328){
+else if (sensorValue<1312){
   is_top = 0;
   is_bot = 2;// UNPLUGGED
 }
-else if (sensorValue<403){
+else if (sensorValue<1612){
   is_top = 2;// UNPLUGGED
   is_bot = 0;
 }
-else if (sensorValue<505){
+else if (sensorValue<2020){
   is_top = 1;
   is_bot = 0;
 }
-else if (sensorValue<615){
+else if (sensorValue<2460){
   is_top = 0;
   is_bot = 1;
 }
-else if (sensorValue<731){
+else if (sensorValue<2924){
   is_top = 2;
   is_bot = 2;// UNPLUGGED
 }
-else if (sensorValue<846){
+else if (sensorValue<3384){
   is_top = 1;
   is_bot = 2;// UNPLUGGED
 }
-else if (sensorValue<956){
+else if (sensorValue<3824){
   is_top = 2;
   is_bot = 1;// UNPLUGGED
 }
